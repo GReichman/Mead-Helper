@@ -20,22 +20,17 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <a href="index.html"><h1>Mead•ly</h1></a>
         <div class="site-nav">
             <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="conversion.html">conversions</a></li>
+                <li><a href="conversion.html">home</a></li>
             </ul>
         </div>
+
     </header>
 
     <main>
-<h1 style="
-font-family: 'Metal Mania', cursive;
-font-weight: bold;
-font-style: normal;
-
-    ">Mead•ly</h1>
         <div class="input">
             <form onSubmit="submitForm();return false">
                 <label for="water_content">Water Amount(oz):</label>
@@ -51,8 +46,9 @@ font-style: normal;
             </form>
         </div>
 
-        <div class="output" id="output">
-           The estimated alcohol output will be: 
+        <div class="output">
+            <p id="output">The estimated alcohol output will be: </p>
+
         </div>
 
         

@@ -1,0 +1,25 @@
+h1, h2, h3 {
+    font-family: $header-font;
+    font-weight: 400;
+    color: $header-color;
+}
+
+li {
+    list-style: none;
+
+    a {
+        text-decoration: none;
+        color: $header-color;
+        font-family: $body-font;
+        font-size: 1em;
+
+        &:hover {
+            color: $accent-color;
+        }
+    }
+}
+
+p {
+    color: $header-color;
+    font-size: 1.5em;
+}

@@ -1,0 +1,16 @@
+/* COLORS */
+
+$background-color: #331E10;
+$header-color: #ffe7ae;
+$accent-color: #C99B5A;
+
+/* FONTS */
+
+$header-font: "Metal Mania", sans-serif;
+$body-font: "monarcha", serif;
+
+
+/* IMPORTS */
+
+@import "partials/structure";
+@import "partials/typography";
