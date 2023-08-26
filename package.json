@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "locomotive-scroll": "^4.1.4",
+    "pdfmake": "^0.2.7",
     "sass": "^1.62.1"
   },
   "devDependencies": {},
