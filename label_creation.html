@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <!-- ADOBE FONTS -->
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/ayw4ing.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ayw4ing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
@@ -19,16 +19,16 @@
         <a href="index.html"><h1>Mead•ly</h1></a>
         <div class="site-nav">
             <ul>
-                <li><a href="conversion.html">Home</a></li>
+                <li><a href="conversion.html">Conversion</a></li>
                 <li><a href="label_creation.html">Label Maker</a></li>
             </ul>
         </div>
     </header>
 
     <main>
-        <div class="input">
+        <div class="input labelcreation">
             <form>
-                <label for="meadName">Mead Name</label>
+                <label for="meadName">Mead Name:</label>
                 <input type="text" id="meadName" name="meadName">
 
                 <label for="abv">ABV %:</label>
@@ -40,23 +40,37 @@
                 <!-- add a way to add multiple ingredients -->
                 <div id="ingredientDiv">
 
-                    <label for="ingredients">Additional Ingredients: </label>
-                    <ul id="ingredients">
-                        
-                    </ul>
-                    <label for="fruitSelect">Add a previously used ingredient:</label>
-                    <select id="fruitSelect">
-                        <option value="default">Select Ingredient...</option>
-                        <option value="test">test</option>
-                    </select>
-                    <p> OR </p>
-                    <label for="newIngredient">Add a new ingredient</label>
-                    <input type="text" id="newIngredient" name="newIngredient">
+                    <div class="added">
+                        <label for="ingredients">Additional Ingredients: </label>
+                        <ul id="ingredients">
+                            
+                        </ul>
+                    </div>  
 
-                    <label for="amount">Amount(oz)</label>
-                    <input type="text" id="amount" name="amount">
+                    <div class="fruitsss">
+                        <div class="fruit1">
+                            <label for="fruitSelect">Add a previously used ingredient:</label>
+                            <select id="fruitSelect">
+                                <option value="default">Select Ingredient...</option>
+                                <option value="test">test</option>
+                            </select>
+                        </div>
+
+                        <span class="or"> OR </span>
+
+                        <div class="fruit2">
+                            <label for="newIngredient">Add a new ingredient</label>
+                            <input type="text" id="newIngredient" name="newIngredient">
+                        </div>
+                    </div>
+
+                    <div class="ounces">
+                        <label for="amount">Amount(oz)</label>
+                        <input type="text" id="amount" name="amount">
                     
-                    <button id="addIngredient" type="button" value="Add Ingredient" onclick="addIngredient()">Add</button>
+                        <button id="addIngredient" type="button" value="Add Ingredient" onclick="addIngredient()">Add</button>
+                    </div> 
+
                 </div>
 
                 <form onSubmit="submitForm();return false">

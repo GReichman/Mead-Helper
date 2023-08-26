@@ -12,6 +12,8 @@ body {
     background-color: $background-color;
     width: 100vw;
     border-bottom: 3px solid $header-color;
+    z-index: 10;
+    top: 0;
 
     h1 {
         margin-left: 1em;
@@ -19,6 +21,7 @@ body {
 
     a {
         text-decoration: none;
+        padding-right: 1.5em;
     }
 
     ul {
@@ -34,29 +37,90 @@ body {
 
 main {
     position: relative;
-    top: 100px;
+
+    .input {
+        margin-top: 100px;
+    }
 }
 
-form {
-    max-width: 700px;
-    margin: 2em auto;
+.hero-title {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/barrels.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    h1 {
+        font-family: $header-font;
+        font-size: 15em;
+        color: $title-color;
+        -webkit-text-fill-color: transparent;
+        background: -webkit-radial-gradient(left, #070D0D 0%, #181614 33%, #AA948C 66%, #070D0D 100%);
+        -webkit-background-clip: text;
+    }
+}
+
+.labelcreation, .conversion {
+    background-image: url(../img/woodtexture.jpg);
+    background-size: cover;
+    height: 90vh;
+}
+
+form, #ingredientDiv {
+    max-width: 1000px;
+    margin: 0 auto;
     color: $header-color;
     font-family: $body-font;
+    text-shadow: 3px 1px 10px black;
+    font-weight: 700;
+    font-style: italic;
 
-    label, input, textarea {
+    input, textarea {
         box-sizing: border-box;
         display: block;
         width: 100%;
         font-size: 1em;
+        line-height: 2em;
     }
 
-    input[type="number"], textarea {
+    label, .or {
+        font-size: 1.5em;
+    }
+
+    input[type="number"], input[type="text"], input[type="date"], textarea {
         border: 2px solid $accent-color;
+        border-radius: 25px;
         padding: .5em;
+        background-color: $background-color;
+        color: $header-color;
     }
 
     label {
-        margin: 1em 0 1em 0;
+        margin: 1em 0 0 0;
+    }
+
+}
+
+#ingredientDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .fruitsss {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .added, .fruit1, .fruit2, .ounces {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .or {
+        margin: 1.5em;
     }
 
 }

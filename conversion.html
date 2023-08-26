@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <!-- ADOBE FONTS -->
-    <!-- <link rel="stylesheet" href="https://use.typekit.net/ayw4ing.css"> -->
+    <link rel="stylesheet" href="https://use.typekit.net/ayw4ing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
         <a href="index.html"><h1>Mead•ly</h1></a>
         <div class="site-nav">
             <ul>
-                <li><a href="conversion.html">Home</a></li>
+                <li><a href="conversion.html">Conversion</a></li>
                 <li><a href="label_creation.html">Label Maker</a></li>
             </ul>
         </div>
@@ -32,7 +32,7 @@
     </header>
 
     <main>
-        <div class="input">
+        <div class="input conversion">
             <form onSubmit="submitForm();return false">
                 <label for="water_content">Water Amount(oz):</label>
                 <input type="number" id="water_content" name="water_content">
@@ -45,11 +45,11 @@
 
                 <input type="submit" value="Submit" id="submit">
             </form>
-        </div>
 
-        <div class="output">
-            <p id="output">The estimated alcohol output will be: </p>
-
+            <div class="output">
+                <p id="output">The estimated alcohol output will be: </p>
+    
+            </div>
         </div>
 
         

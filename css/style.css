@@ -2,7 +2,7 @@
 /* FONTS */
 /* IMPORTS */
 body {
-  background-color: #331E10;
+  background-color: #070D0D;
   margin: 0;
   padding: 0;
 }
@@ -12,15 +12,18 @@ body {
   display: flex;
   justify-content: space-between;
   position: fixed;
-  background-color: #331E10;
+  background-color: #070D0D;
   width: 100vw;
-  border-bottom: 3px solid #ffe7ae;
+  border-bottom: 3px solid #ecd0c6;
+  z-index: 10;
+  top: 0;
 }
 .header h1 {
   margin-left: 1em;
 }
 .header a {
   text-decoration: none;
+  padding-right: 1.5em;
 }
 .header ul {
   display: flex;
@@ -33,33 +36,87 @@ body {
 
 main {
   position: relative;
-  top: 100px;
+}
+main .input {
+  margin-top: 100px;
 }
 
-form {
-  max-width: 700px;
-  margin: 2em auto;
-  color: #ffe7ae;
-  font-family: "monarcha", serif;
+.hero-title {
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/barrels.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
-form label, form input, form textarea {
+.hero-title h1 {
+  font-family: "nelson-rugged", sans-serif;
+  font-size: 15em;
+  color: #181614;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-radial-gradient(left, #070D0D 0%, #181614 33%, #AA948C 66%, #070D0D 100%);
+  -webkit-background-clip: text;
+}
+
+.labelcreation, .conversion {
+  background-image: url(../img/woodtexture.jpg);
+  background-size: cover;
+  height: 90vh;
+}
+
+form, #ingredientDiv {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #ecd0c6;
+  font-family: "monarcha", serif;
+  text-shadow: 3px 1px 10px black;
+  font-weight: 700;
+  font-style: italic;
+}
+form input, form textarea, #ingredientDiv input, #ingredientDiv textarea {
   box-sizing: border-box;
   display: block;
   width: 100%;
   font-size: 1em;
+  line-height: 2em;
 }
-form input[type=number], form textarea {
-  border: 2px solid #C99B5A;
+form label, form .or, #ingredientDiv label, #ingredientDiv .or {
+  font-size: 1.5em;
+}
+form input[type=number], form input[type=text], form input[type=date], form textarea, #ingredientDiv input[type=number], #ingredientDiv input[type=text], #ingredientDiv input[type=date], #ingredientDiv textarea {
+  border: 2px solid #AA948C;
+  border-radius: 25px;
   padding: 0.5em;
+  background-color: #070D0D;
+  color: #ecd0c6;
 }
-form label {
-  margin: 1em 0 1em 0;
+form label, #ingredientDiv label {
+  margin: 1em 0 0 0;
+}
+
+#ingredientDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#ingredientDiv .fruitsss {
+  display: flex;
+  flex-direction: row;
+}
+#ingredientDiv .added, #ingredientDiv .fruit1, #ingredientDiv .fruit2, #ingredientDiv .ounces {
+  display: flex;
+  flex-direction: column;
+}
+#ingredientDiv .or {
+  margin: 1.5em;
 }
 
 h1, h2, h3 {
-  font-family: "Metal Mania", sans-serif;
+  font-family: "nelson-rugged", sans-serif;
   font-weight: 400;
-  color: #ffe7ae;
+  color: #ecd0c6;
 }
 
 li {
@@ -67,15 +124,15 @@ li {
 }
 li a {
   text-decoration: none;
-  color: #ffe7ae;
+  color: #ecd0c6;
   font-family: "monarcha", serif;
   font-size: 1em;
 }
 li a:hover {
-  color: #C99B5A;
+  color: #AA948C;
 }
 
 p {
-  color: #ffe7ae;
+  color: #ecd0c6;
   font-size: 1.5em;
 }
