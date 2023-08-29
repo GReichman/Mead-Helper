@@ -1,7 +1,15 @@
-
+let ingredientArray=[];
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Hello World!");
-  
+    let currentStorage = localStorage.getItem("Ingredients")
+    if(currentStorage){
+      ingredientArray = JSON.parse(currentStorage);
+    }
+    else{
+      localStorage.setItem("Ingredients",JSON.stringify([]))
+    }
+  console.log(ingredientArray)
+  loadPreviousIngredients()
   });
 
   function addIngredient(){
@@ -21,12 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
    let newItem = document.createElement("li");
    let name = document.createElement("span");
    let ounces = document.createElement("span");
+   let button = document.createElement("button");
+   button.textContent = "X";
+   button.onclick = function(){
+    this.parentElement.remove();
+   }
    name.textContent=result;
    name.className=("ingredientSpan")
    ounces.textContent= amount.value + " oz"
    ounces.className=("amountSpan")
    newItem.append(name)
    newItem.append(ounces)
+   newItem.append(button)
    ingredientList.append(newItem);
 
    ingredient.value="default";
@@ -38,20 +52,35 @@ document.addEventListener("DOMContentLoaded", () => {
     let name = document.getElementById("meadName").value;
     let abv = document.getElementById("abv").value;
     let honey = document.getElementById("honey").value;
-    let ingredients;
+    let ingredients= document.getElementsByClassName("ingredientSpan");
+    let ingredientList = [];
     let started = document.getElementById("started")
     let bottled = document.getElementById("bottled").value;
     let notes = document.getElementById("notes").value;
-
-     let mead = {}
+    let mead = {}
       
+    for(let i=0; i<ingredients.length; i++){
+      ingredientList.push(ingredients[i].textContent)
+    }
+    console.log(ingredientList);
+    addToLocalStorage(ingredientList)
   }
   
-// function importIngredients() {
-//     fs.readFile('ingredients.txt', (err, data) => {
-//    if (err) throw err;
-//       console.log(data.toString());
-// })
-// }
+  function addToLocalStorage(arr){
+    arr.forEach(ele =>{
+      if(!ingredientArray.includes(ele)){
+        ingredientArray.push(ele)
+      }
+    });
+    console.log(ingredientArray)
+    localStorage.setItem("Ingredients",JSON.stringify(ingredientArray));
+  }
 
-// importIngredients();
+  function loadPreviousIngredients(){
+    ingredientArray.forEach(ele =>{
+      let newOption = document.createElement("option");
+      newOption.value = ele;
+      newOption.textContent = ele;
+      document.getElementById("fruitSelect").append(newOption)
+    })
+  }
