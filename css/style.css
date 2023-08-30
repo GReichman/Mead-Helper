@@ -1,48 +1,10 @@
 /* COLORS */
 /* FONTS */
 /* IMPORTS */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
 body {
   background-color: #070D0D;
   margin: 0;
   padding: 0;
-}
-
-.header {
-  margin: 0;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  background-color: #070D0D;
-  width: 100vw;
-  border-bottom: 3px solid #ecd0c6;
-  z-index: 10;
-  top: 0;
-}
-.header h1 {
-  margin-left: 1em;
-}
-.header a {
-  text-decoration: none;
-  padding-right: 1.5em;
-}
-.header ul {
-  display: flex;
-  flex-direction: row;
-}
-.header ul li {
-  justify-content: space-around;
-  padding: 1em;
 }
 
 main {
@@ -65,9 +27,13 @@ main .input {
   font-family: "nelson-rugged", sans-serif;
   font-size: 15em;
   color: #181614;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-radial-gradient(left, #070D0D 0%, #181614 33%, #AA948C 66%, #070D0D 100%);
+  background: -webkit-linear-gradient(right, #AA948C, #181614, #AA948C, #181614, #AA948C);
+  background-size: 1000px 200px;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation-name: gradient-animations;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
 }
 
 .labelcreation, .conversion {
@@ -124,6 +90,26 @@ form label, #ingredientDiv label {
   margin: 1.5em;
 }
 
+.ingredientspan {
+  font-size: 2em;
+  padding: 0.5em;
+  color: white;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.amountspan {
+  color: #ecd0c6;
+}
+
+.added {
+  border: 1px solid red;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+}
+
 h1, h2, h3 {
   font-family: "nelson-rugged", sans-serif;
   font-weight: 400;
@@ -146,4 +132,52 @@ li a:hover {
 p {
   color: #ecd0c6;
   font-size: 1.5em;
+}
+
+.buttonx {
+  border-color: white;
+  border-radius: 25px;
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+  padding: 0.25em 0.5em;
+  margin: 0 1em;
+}
+.buttonx:hover {
+  cursor: pointer;
+}
+
+@keyframes gradient-animations {
+  0% {
+    background-position: 0 1000px;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+.header {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #070D0D;
+  width: 100vw;
+  border-bottom: 3px solid #ecd0c6;
+  z-index: 10;
+  top: 0;
+}
+.header h1 {
+  margin-left: 1em;
+}
+.header a {
+  text-decoration: none;
+  padding-right: 1.5em;
+}
+.header ul {
+  display: flex;
+  flex-direction: row;
+}
+.header ul li {
+  justify-content: space-around;
+  padding: 1em;
 }

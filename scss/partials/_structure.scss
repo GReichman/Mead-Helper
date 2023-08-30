@@ -1,39 +1,7 @@
-
 body {
     background-color: $background-color;
     margin: 0;
     padding: 0;
-}
-
-.header {
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    background-color: $background-color;
-    width: 100vw;
-    border-bottom: 3px solid $header-color;
-    z-index: 10;
-    top: 0;
-
-    h1 {
-        margin-left: 1em;
-    }
-
-    a {
-        text-decoration: none;
-        padding-right: 1.5em;
-    }
-
-    ul {
-        display: flex;
-        flex-direction: row;
-        
-        li {
-            justify-content: space-around;
-            padding: 1em;
-        }
-    }
 }
 
 main {
@@ -57,9 +25,13 @@ main {
         font-family: $header-font;
         font-size: 15em;
         color: $title-color;
-        -webkit-text-fill-color: transparent;
-        background: -webkit-radial-gradient(left, #070D0D 0%, #181614 33%, #AA948C 66%, #070D0D 100%);
+        background: -webkit-linear-gradient(right, #AA948C,#181614,#AA948C,#181614,#AA948C);
+        background-size: 1000px 200px;
         -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation-name: gradient-animations;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
     }
 }
 
@@ -124,4 +96,23 @@ form, #ingredientDiv {
         margin: 1.5em;
     }
 
+}
+.ingredientspan {
+    font-size: 2em;
+    padding: .5em;
+    color: white;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.amountspan {
+    color: $header-color;
+}
+
+.added {
+    border: 1px solid red;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
 }

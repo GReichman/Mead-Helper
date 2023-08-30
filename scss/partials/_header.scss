@@ -1,0 +1,30 @@
+.header {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background-color: $background-color;
+    width: 100vw;
+    border-bottom: 3px solid $header-color;
+    z-index: 10;
+    top: 0;
+
+    h1 {
+        margin-left: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        padding-right: 1.5em;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        
+        li {
+            justify-content: space-around;
+            padding: 1em;
+        }
+    }
+}

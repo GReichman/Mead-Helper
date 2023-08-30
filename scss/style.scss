@@ -4,14 +4,22 @@ $background-color: #070D0D;
 $title-color: #181614;
 $header-color: #ecd0c6;
 $accent-color: #AA948C;
+$color-one: #271407;
+$color-two: #694329;
+
 
 /* FONTS */
 
 $header-font: "nelson-rugged", sans-serif;
 $body-font: "monarcha", serif;
+$font-one: "santelia-rough-two", sans-serif;
+
 
 
 /* IMPORTS */
 
 @import "partials/structure";
 @import "partials/typography";
+@import "partials/button";
+@import "partials/animation";
+@import "partials/header";
