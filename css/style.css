@@ -2,7 +2,9 @@
 /* FONTS */
 /* IMPORTS */
 body {
-  background-color: #070D0D;
+  background-image: url("../img/woodtexture.jpg");
+  background-size: cover;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -17,33 +19,23 @@ main .input {
 .hero-title {
   display: flex;
   justify-content: center;
-  background-image: url(../img/barrels.jpg);
+  background-image: url(../img/barrels-2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
 }
 .hero-title h1 {
-  font-family: "nelson-rugged", sans-serif;
+  font-family: "nelson", sans-serif;
   font-size: 15em;
-  color: #181614;
-  background: -webkit-linear-gradient(right, #AA948C, #181614, #AA948C, #181614, #AA948C);
-  background-size: 1000px 200px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation-name: gradient-animations;
-  animation-duration: 15s;
-  animation-iteration-count: infinite;
+  color: #aa9a8c;
 }
 
-.labelcreation, .conversion {
-  background-image: url(../img/woodtexture.jpg);
-  background-size: cover;
-  height: 90vh;
+.input {
+  width: 500px;
 }
 
 form, #ingredientDiv {
-  max-width: 1000px;
   margin: 0 auto;
   color: #ecd0c6;
   font-family: "monarcha", serif;
@@ -62,9 +54,8 @@ form label, form .or, #ingredientDiv label, #ingredientDiv .or {
   font-size: 1.5em;
 }
 form input[type=number], form input[type=text], form input[type=date], form textarea, #ingredientDiv input[type=number], #ingredientDiv input[type=text], #ingredientDiv input[type=date], #ingredientDiv textarea {
-  border: 2px solid #AA948C;
+  border: 1px solid #AA948C;
   border-radius: 25px;
-  padding: 0.5em;
   background-color: #070D0D;
   color: #ecd0c6;
 }
@@ -111,7 +102,7 @@ form label, #ingredientDiv label {
 }
 
 h1, h2, h3 {
-  font-family: "nelson-rugged", sans-serif;
+  font-family: "nelson", sans-serif;
   font-weight: 400;
   color: #ecd0c6;
 }
@@ -180,4 +171,38 @@ p {
 .header ul li {
   justify-content: space-around;
   padding: 1em;
+}
+
+.glass {
+  height: 100%;
+  width: 100%;
+  background-image: url(..img/woodtexture.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: inset(10em);
+  backdrop-filter: blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drop-shadow {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.3));
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20em;
+}
+.drop-shadow:before {
+  display: block;
+  content: "";
+  top: 10em;
+  border-top: 2px solid rgba(225, 225, 225, 0.2);
+  border-left: 1px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.3);
+  z-index: 2;
 }

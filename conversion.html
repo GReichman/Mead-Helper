@@ -32,24 +32,27 @@
     </header>
 
     <main>
-        <div class="input conversion">
-            <form onSubmit="submitForm();return false">
-                <label for="water_content">Water Amount(oz):</label>
-                <input type="number" id="water_content" name="water_content">
+        <div class="drop-shadow">
 
-                <label for="honey_content">Honey Amount(oz):</label>
-                <input type="number" id="honey_content" name="honey_content">
+            <div class="glass"></div>
 
-                <label for="added_sugar">Additional Sugars(oz):</label>
-                <input type="number" id="added_sugar" name="added_sugar">
+            <div class="input conversion">
+                <form onSubmit="submitForm();return false">
+                    <label for="water_content">Water Amount(oz):</label>
+                    <input type="number" id="water_content" name="water_content">
 
-                <input type="submit" value="Submit" id="submit">
-            </form>
+                    <label for="honey_content">Honey Amount(oz):</label>
+                    <input type="number" id="honey_content" name="honey_content">
 
-            <div class="output">
-                <p id="output">The estimated alcohol output will be: </p>
-    
-            </div>
+                    <label for="added_sugar">Additional Sugars(oz):</label>
+                    <input type="number" id="added_sugar" name="added_sugar">
+
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+
+                <div class="output">
+                    <p id="output">The estimated alcohol output will be: </p>
+                </div>
         </div>
 
         

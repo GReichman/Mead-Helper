@@ -1,5 +1,7 @@
 body {
-    background-color: $background-color;
+    background-image: url("../img/woodtexture.jpg");
+    background-size: cover;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -15,7 +17,7 @@ main {
 .hero-title {
     display: flex;
     justify-content: center;
-    background-image: url(../img/barrels.jpg);
+    background-image: url(../img/barrels-2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -24,25 +26,15 @@ main {
     h1 {
         font-family: $header-font;
         font-size: 15em;
-        color: $title-color;
-        background: -webkit-linear-gradient(right, #AA948C,#181614,#AA948C,#181614,#AA948C);
-        background-size: 1000px 200px;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation-name: gradient-animations;
-        animation-duration: 15s;
-        animation-iteration-count: infinite;
+        color: $color-two;
     }
 }
 
-.labelcreation, .conversion {
-    background-image: url(../img/woodtexture.jpg);
-    background-size: cover;
-    height: 90vh;
+.input {
+    width: 500px;
 }
 
 form, #ingredientDiv {
-    max-width: 1000px;
     margin: 0 auto;
     color: $header-color;
     font-family: $body-font;
@@ -63,9 +55,9 @@ form, #ingredientDiv {
     }
 
     input[type="number"], input[type="text"], input[type="date"], textarea {
-        border: 2px solid $accent-color;
+        border: 1px solid $accent-color;
         border-radius: 25px;
-        padding: .5em;
+
         background-color: $background-color;
         color: $header-color;
     }

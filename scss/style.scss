@@ -5,12 +5,12 @@ $title-color: #181614;
 $header-color: #ecd0c6;
 $accent-color: #AA948C;
 $color-one: #271407;
-$color-two: #694329;
+$color-two: #aa9a8c;
 
 
 /* FONTS */
 
-$header-font: "nelson-rugged", sans-serif;
+$header-font: "nelson", sans-serif;
 $body-font: "monarcha", serif;
 $font-one: "santelia-rough-two", sans-serif;
 
@@ -23,3 +23,4 @@ $font-one: "santelia-rough-two", sans-serif;
 @import "partials/button";
 @import "partials/animation";
 @import "partials/header";
+@import "partials/glass";
