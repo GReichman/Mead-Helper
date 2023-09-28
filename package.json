@@ -4,6 +4,7 @@
   "description": "web tool to help with mead brewing",
   "main": "index.js",
   "dependencies": {
+    "jspdf": "^2.5.1",
     "locomotive-scroll": "^4.1.4",
     "pdfmake": "^0.2.7",
     "sass": "^1.62.1"
