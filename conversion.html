@@ -56,3 +56,34 @@
         </div>
     </main>
 </body>
+
+<!-- 
+    
+
+I'm sure a lot of more experienced mead makers already know these formulas and use them either in spreadsheets or apps. However, I thought some might appreciate having them so they can build their own spreadsheets or just use a calculator.
+
+The formula for finding your ABV from your Original Gravity and Final Gravity is this:
+
+(OG-FG)x131.25=ABV
+
+In a spreadsheet, you would do it this way:
+
+=round((A1-B1)*131.25,2)
+
+If you know where you want your Final Gravity and you have a good idea of the Yeast Tolerance of your yeast, you can use this formula to find where your Original Gravity should be:
+
+(YT/131.25)+FG=OG
+
+For a spreadsheet:
+
+=round((B1/131.25)+A1,3)
+
+Finally, if you have your Original Gravity and have a good idea of your Yeast Tolerance, this formula will tell you your Final Gravity:
+
+OG-(YT/131.25)=FG
+
+For a spreadsheet:
+
+=round(A1-(B1/131.25),3)
+
+ -->
