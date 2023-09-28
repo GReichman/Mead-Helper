@@ -32,11 +32,10 @@
     </header>
 
     <main>
-        <div class="drop-shadow">
-
-            <div class="glass"></div>
+        <div class="glass">
 
             <div class="input conversion">
+
                 <form onSubmit="submitForm();return false">
                     <label for="water_content">Water Amount(oz):</label>
                     <input type="number" id="water_content" name="water_content">
@@ -47,14 +46,13 @@
                     <label for="added_sugar">Additional Sugars(oz):</label>
                     <input type="number" id="added_sugar" name="added_sugar">
 
-                    <input type="submit" value="Submit" id="submit">
+                    <input type="submit" value="Submit" id="submit" class="buttonx">
                 </form>
 
                 <div class="output">
                     <p id="output">The estimated alcohol output will be: </p>
                 </div>
+            </div>
         </div>
-
-        
     </main>
 </body>

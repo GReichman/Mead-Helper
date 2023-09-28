@@ -1,33 +1,13 @@
 .glass {
-    height: 100%;
-    width: 100%;
-    background-image: url(..img/woodtexture.jpg);
-    background-size: cover;
-    background-position: center;
-    clip-path: inset(10em);
-    backdrop-filter: blur(20px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.drop-shadow {
-    height: 100%;
-    width: 100%;
-    filter:  drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.30));
-    position: absolute;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 25px;
+    border: 1.5px solid rgba(225,225,225, 0.2);
+    width: 50vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    margin-top: 30em;
-        &:before {
-        display: block;
-        content: "";
-        top: 10em;
-        border-top: 2px solid rgba(225,225,225, 0.2);
-        border-left: 1px solid rgba(225,225,225, 0.1);
-        border-right: 1px solid rgba(225,225,225, 0.3);
-        z-index: 2;
-        }
+    justify-content: center;
+    margin: 10em auto;
 }
