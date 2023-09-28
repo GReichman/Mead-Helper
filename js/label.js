@@ -1,3 +1,5 @@
+
+
 let ingredientArray=[];
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Hello World!");
@@ -10,7 +12,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   console.log(ingredientArray)
   loadPreviousIngredients()
-  });
+  
+});
+
+function download(file) {
+  const link = document.createElement('a')
+  const url = URL.createObjectURL(file)
+
+  link.href = url
+  link.download = file.name
+  document.body.appendChild(link)
+  link.click()
+
+  document.body.removeChild(link)
+  window.URL.revokeObjectURL(url)
+}
 
   function addIngredient(){
     let ingredient = document.getElementById("fruitSelect");
@@ -55,16 +71,19 @@ document.addEventListener("DOMContentLoaded", () => {
     let honey = document.getElementById("honey").value;
     let ingredients= document.getElementsByClassName("ingredientspan");
     let ingredientList = [];
-    let started = document.getElementById("started")
+    let started = document.getElementById("started").value;
     let bottled = document.getElementById("bottled").value;
     let notes = document.getElementById("notes").value;
     let mead = {}
+    console.log(started +"\n"+ bottled)
       
     for(let i=0; i<ingredients.length; i++){
       ingredientList.push(ingredients[i].textContent)
     }
     console.log(ingredientList);
     addToLocalStorage(ingredientList)
+
+    createFile(name,abv,honey,ingredientList,started,bottled,notes)
   }
   
   function addToLocalStorage(arr){
@@ -85,3 +104,14 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("fruitSelect").append(newOption)
     })
   }
+
+  function createFile(name,abv,honey,ingredientList,started,bottled,notes){
+    let fileContent=[name+"\n",abv+"\n",honey+"\n",ingredientList+"\n",started+"\n",bottled+"\n",notes]
+    
+    const file = new File(fileContent, name+'.txt', {
+      type: 'text/plain',
+    })
+    download(file);
+  }
+  
+
