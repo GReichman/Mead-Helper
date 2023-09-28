@@ -195,7 +195,7 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 20em;
+  margin-top: 30em;
 }
 .drop-shadow:before {
   display: block;

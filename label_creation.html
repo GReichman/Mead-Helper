@@ -26,63 +26,66 @@
     </header>
 
     <main>
-        <div class="input labelcreation">
-            <form>
-                <label for="meadName">Mead Name:</label>
-                <input type="text" id="meadName" name="meadName">
+        <div class="drop-shadow">
+            <div class="glass"></div>
+            <div class="input labelcreation">
+                <form>
+                    <label for="meadName">Mead Name:</label>
+                    <input type="text" id="meadName" name="meadName">
 
-                <label for="abv">ABV %:</label>
-                <input type="number" id="abv" name="abv">
+                    <label for="abv">ABV %:</label>
+                    <input type="number" id="abv" name="abv">
 
-                <label for="honey">Type of Honey:</label>
-                <input type="text" id="honey" name="honey">
-                </form>
-                <!-- add a way to add multiple ingredients -->
-                <div id="ingredientDiv">
+                    <label for="honey">Type of Honey:</label>
+                    <input type="text" id="honey" name="honey">
+                    </form>
+                    <!-- add a way to add multiple ingredients -->
+                    <div id="ingredientDiv">
 
-                    <div class="added">
-                        <label for="ingredients">Additional Ingredients: </label>
-                        <ul id="ingredients">
-                        </ul>
-                    </div>  
+                        <div class="added">
+                            <label for="ingredients">Additional Ingredients: </label>
+                            <ul id="ingredients">
+                            </ul>
+                        </div>  
 
-                    <div class="fruitsss">
-                        <div class="fruit1">
-                            <label for="fruitSelect">Add a previously used ingredient:</label>
-                            <select id="fruitSelect">
-                                <option value="default">Select Ingredient...</option>
-                            </select>
+                        <div class="fruitsss">
+                            <div class="fruit1">
+                                <label for="fruitSelect">Add a previously used ingredient:</label>
+                                <select id="fruitSelect">
+                                    <option value="default">Select Ingredient...</option>
+                                </select>
+                            </div>
+
+                            <span class="or"> OR </span>
+
+                            <div class="fruit2">
+                                <label for="newIngredient">Add a new ingredient</label>
+                                <input type="text" id="newIngredient" name="newIngredient">
+                            </div>
                         </div>
 
-                        <span class="or"> OR </span>
+                        <div class="ounces">
+                            <label for="amount">Amount(oz)</label>
+                            <input type="text" id="amount" name="amount">
+                        
+                            <button id="addIngredient" type="button" value="Add Ingredient" onclick="addIngredient()">Add</button>
+                        </div> 
 
-                        <div class="fruit2">
-                            <label for="newIngredient">Add a new ingredient</label>
-                            <input type="text" id="newIngredient" name="newIngredient">
-                        </div>
                     </div>
 
-                    <div class="ounces">
-                        <label for="amount">Amount(oz)</label>
-                        <input type="text" id="amount" name="amount">
-                    
-                        <button id="addIngredient" type="button" value="Add Ingredient" onclick="addIngredient()">Add</button>
-                    </div> 
+                    <form onSubmit="submitForm();return false">
+                    <label for="started">Date Started:</label>
+                    <input type="date" id="started" name="started">
 
-                </div>
+                    <label for="bottled">Date Bottled:</label>
+                    <input type="date" id="bottled" name="bottled">
 
-                <form onSubmit="submitForm();return false">
-                <label for="started">Date Started:</label>
-                <input type="date" id="started" name="started">
+                    <label for="notes">Notes:</label>
+                    <textarea id="notes" name="notes"></textarea>
 
-                <label for="bottled">Date Bottled:</label>
-                <input type="date" id="bottled" name="bottled">
-
-                <label for="notes">Notes:</label>
-                <textarea id="notes" name="notes"></textarea>
-
-                <input type="submit" value="Submit" id="submit">
-            </form>
+                    <input type="submit" value="Submit" id="submit">
+                </form>
+            </div>
         </div>
         
     </main>
